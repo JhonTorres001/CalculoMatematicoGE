@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <p>
+
+        <select id="Figuras">
+            <option value="" disabled selected>Elegir </option>
+            <option value="mult">Multiplicar(-)</option>
+            <option value="div">Dividir(+)</option>
+            <option value="sustraer">Sustraer(x)</option>
+            <option value="sumar">Sumar(/)</option>
+        </select>
+    </br>
+</br>
+        <label>Numero 1:</label>
+          <input type="text" name="" id="num1">
+
+    
+
+    </br>
+</br>
+<label>Numero 2:</label>
+          <input type="text" name="" id="num2">
+        </br>
+    </br>
+          <input type="button" id="calcular" value="Calcular">
+
+        </p> 
+</body>
+
+<script>
+   
+    document.getElementById("calcular").addEventListener('click', () => {
+        
+        var x = document.getElementById("Figuras").value;
+
+        var num = document.getElementById("num1").value;
+        var numero = document.getElementById("num2").value;
+
+        
+        
+        switch (x) {
+                case 'mult':
+                alert(parseInt(num) - parseInt(numero));
+                break;
+                case 'div':
+                alert(parseInt(num) + parseInt(numero));
+                break;
+                case 'sustraer':
+                alert(parseInt(num) * parseInt(numero));
+                break;
+                case 'sumar':
+                alert(parseInt(num) / parseInt(numero));
+                break;
+            
+            default:
+                break;
+        }
+
+
+    });
+
+</script>
+</html>
